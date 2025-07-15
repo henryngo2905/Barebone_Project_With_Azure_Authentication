@@ -1,0 +1,34 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.12.35728.132
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Barebone.Web", "DownstreamPortal.Web\Barebone.Web.csproj", "{874F7002-BFBE-4BED-BF00-6466B1B89F27}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Barebone.Data", "DownstreamPortal.Data\Barebone.Data.csproj", "{258E58D5-1B11-441E-9234-17FA613D98CE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Barebone.Logic", "DownstreamPortal.Logic\Barebone.Logic.csproj", "{D4CECC3B-0277-4F50-B66A-96227F14D4DF}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{874F7002-BFBE-4BED-BF00-6466B1B89F27}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{874F7002-BFBE-4BED-BF00-6466B1B89F27}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{874F7002-BFBE-4BED-BF00-6466B1B89F27}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{874F7002-BFBE-4BED-BF00-6466B1B89F27}.Release|Any CPU.Build.0 = Release|Any CPU
+		{258E58D5-1B11-441E-9234-17FA613D98CE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{258E58D5-1B11-441E-9234-17FA613D98CE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{258E58D5-1B11-441E-9234-17FA613D98CE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{258E58D5-1B11-441E-9234-17FA613D98CE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D4CECC3B-0277-4F50-B66A-96227F14D4DF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D4CECC3B-0277-4F50-B66A-96227F14D4DF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D4CECC3B-0277-4F50-B66A-96227F14D4DF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D4CECC3B-0277-4F50-B66A-96227F14D4DF}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

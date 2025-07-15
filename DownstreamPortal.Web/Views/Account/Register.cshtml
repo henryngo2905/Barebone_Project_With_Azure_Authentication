@@ -1,0 +1,80 @@
+﻿@model Barebone.Models.RegisterModel
+
+<style>
+    .form-container {
+        max-width: 400px; /* adjust based on how wide you want the form */
+        margin: 0 auto;
+        padding: 20px;
+    }
+
+</style>
+
+<div class="accountHeader">
+   
+</div>
+
+<!-- Centered form wrapper -->
+<div class="form-container">
+    <h2>Create a New Account</h2>
+    <p>Use the form below to create a new account.</p>
+    <p style="color:red">@ViewBag.ErrorMessage</p>
+
+    @using (Html.BeginForm())
+    {
+        @Html.AntiForgeryToken()
+
+        @Html.DevExpress().TextBoxFor(m => m.UserName, tb =>
+        {
+            tb.Properties.Caption = "User Name";
+            tb.Properties.CaptionSettings.Position = EditorCaptionPosition.Top;
+            tb.ShowModelErrors = true;
+            tb.Properties.ValidationSettings.Display = Display.Dynamic;
+            tb.Properties.ValidationSettings.ErrorDisplayMode = ErrorDisplayMode.Text;
+            tb.Properties.ValidationSettings.ErrorTextPosition = ErrorTextPosition.Bottom;
+            tb.Width = Unit.Pixel(300);
+        }).GetHtml()
+
+        @Html.DevExpress().TextBoxFor(m => m.Email, tb =>
+        {
+            tb.Properties.Caption = "Email";
+            tb.Properties.CaptionSettings.Position = EditorCaptionPosition.Top;
+            tb.ShowModelErrors = true;
+            tb.Properties.ValidationSettings.Display = Display.Dynamic;
+            tb.Properties.ValidationSettings.ErrorDisplayMode = ErrorDisplayMode.Text;
+            tb.Properties.ValidationSettings.ErrorTextPosition = ErrorTextPosition.Bottom;
+            tb.Width = Unit.Pixel(300);
+        }).GetHtml()
+
+        @Html.DevExpress().TextBoxFor(m => m.Password, tb =>
+        {
+            tb.Properties.Caption = "Password";
+            tb.Properties.Password = true;
+            tb.Properties.CaptionSettings.Position = EditorCaptionPosition.Top;
+            tb.ShowModelErrors = true;
+            tb.Properties.ValidationSettings.Display = Display.Dynamic;
+            tb.Properties.ValidationSettings.ErrorDisplayMode = ErrorDisplayMode.Text;
+            tb.Properties.ValidationSettings.ErrorTextPosition = ErrorTextPosition.Bottom;
+            tb.Width = Unit.Pixel(300);
+        }).GetHtml()
+
+        @Html.DevExpress().TextBoxFor(m => m.ConfirmPassword, tb =>
+        {
+            tb.Properties.Caption = "Confirm Password";
+            tb.Properties.Password = true;
+            tb.Properties.CaptionSettings.Position = EditorCaptionPosition.Top;
+            tb.ShowModelErrors = true;
+            tb.Properties.ValidationSettings.Display = Display.Dynamic;
+            tb.Properties.ValidationSettings.ErrorDisplayMode = ErrorDisplayMode.Text;
+            tb.Properties.ValidationSettings.ErrorTextPosition = ErrorTextPosition.Bottom;
+            tb.Width = Unit.Pixel(300);
+        }).GetHtml()
+
+        <br />
+        @Html.DevExpress().Button(b =>
+        {
+            b.Name = "Button";
+            b.Text = "Register";
+            b.UseSubmitBehavior = true;
+        }).GetHtml()
+    }
+</div>
